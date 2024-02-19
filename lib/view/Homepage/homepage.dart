@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Home"),
+          title: Text("Home",style: TextStyle(fontWeight: FontWeight.bold),),
           actions: [
             CircleAvatar(
               radius: 20,
@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Text(
                       "Main Account",
-                      style: TextStyle(color: Colors.deepPurpleAccent),
+                      style: TextStyle(color: Colors.deepPurpleAccent,fontWeight: FontWeight.w500),
                     ),
                     Icon(Icons.arrow_drop_down_outlined)
                   ],
@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
                     "13.458 ",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   ),
-                  Text("&",
+                  Text("\$",
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 30))
                 ],
@@ -53,7 +53,8 @@ class HomePage extends StatelessWidget {
               Row(
                 children: [
                   Padding(padding: EdgeInsets.only(left: 20)),
-                  Icon(Icons.remove_red_eye),
+                  Icon(Icons.remove_red_eye_outlined),
+                  SizedBox(width: 5,),
                   Text("Current Balance")
                 ],
               ),
@@ -64,12 +65,12 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 155, 137, 186),
-                          borderRadius: BorderRadius.circular(10)),
+                          color: Color.fromARGB(255, 198, 189, 215),
+                          borderRadius: BorderRadius.circular(5)),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(
-                          Icons.plus_one,
+                          Icons.add,
                         ),
                       ),
                     ),
@@ -78,8 +79,8 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 155, 137, 186),
-                          borderRadius: BorderRadius.circular(10)),
+                          color: Color.fromARGB(255, 198, 189, 215),
+                          borderRadius: BorderRadius.circular(5)),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(Icons.arrow_forward),
@@ -89,12 +90,15 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
+                      
+                     
                       decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 215, 207, 227),
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(5)),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text("Split a Purchase"),
+                        padding: const EdgeInsets.symmetric(horizontal: 50.0,vertical: 10),
+                        child: Text("Split a Purchase",
+                        style: TextStyle(fontWeight: FontWeight.w500,),),
                       ),
                     ),
                   )
@@ -116,7 +120,7 @@ class HomePage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     
                       children: [
                         Container(
                           height: 50,
@@ -127,11 +131,14 @@ class HomePage extends StatelessWidget {
                             "https://cdn.pixabay.com/photo/2020/04/08/08/08/spring-5016266_1280.jpg",
                             fit: BoxFit.cover,
                           ),
+                        
                         ),
+                        SizedBox(width: 20,),
                         Column(
                           children: [Text("Nike Shop"), Text("17 oct")],
                         ),
-                        Text("-62.94 &")
+                        SizedBox(width: 150,),
+                        Text("-62.94 \$")
                       ],
                     ),
                   ),
@@ -144,7 +151,7 @@ class HomePage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    
                       children: [
                         Container(
                           height: 50,
@@ -156,10 +163,12 @@ class HomePage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
+                        SizedBox(width: 20,),
                         Column(
                           children: [Text("Star Bugs"), Text("17 oct")],
                         ),
-                        Text("-6,00 &")
+                        SizedBox(width: 150,),
+                        Text("-6,00 \$")
                       ],
                     ),
                   ),
@@ -172,7 +181,7 @@ class HomePage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      
                       children: [
                         Container(
                           height: 50,
@@ -184,16 +193,19 @@ class HomePage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
+                        SizedBox(width: 20,),
                         Column(
                           children: [Text("Anna Johnson"), Text("14 oct")],
                         ),
+                        SizedBox(width: 125,),
                         Container(
                             decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 187, 176, 205),
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8),
-                              child: Text("5000 &"),
+                              
+                              child: Text("5000 \$"),
                             ))
                       ],
                     ),
@@ -207,7 +219,7 @@ class HomePage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      
                       children: [
                         Container(
                           height: 50,
@@ -219,16 +231,18 @@ class HomePage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
+                        SizedBox(width: 20,),
                         Column(
                           children: [Text("FROM SAVINGS"), Text("3 oct")],
                         ),
+                        SizedBox(width: 120,),
                         Container(
                             decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 187, 176, 205),
                                 borderRadius: BorderRadius.circular(10)),
                             child: Padding(
                               padding: const EdgeInsets.all(8),
-                              child: Text("2500 &"),
+                              child: Text("2500 \$"),
                             ))
                       ],
                     ),
@@ -248,7 +262,7 @@ class HomePage extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                     
                       children: [
                         Container(
                           height: 50,
@@ -260,15 +274,18 @@ class HomePage extends StatelessWidget {
                             fit: BoxFit.cover,
                           ),
                         ),
+                        SizedBox(width: 20,),
                         Column(
-                          children: [Text("McDonald's"), Text("-12.37 &")],
+                          children: [Text("McDonald's"), Text("-12.37 \$")],
                         ),
-                        Text("-62.94 &")
+                        SizedBox(width: 150,),
+                        Text("-62.94 \$")
                       ],
                     ),
                   ),
                 ),
               ),
+              
               Container(
                   child: Padding(
                 padding: const EdgeInsets.all(20),
